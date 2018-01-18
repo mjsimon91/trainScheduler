@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+      <title>Train Schedule!</title>
+  </head>
+
+  <body>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Train Schedule</h1>
+        <p class="lead">Find your train below</p>
+        <p class ="lead" id="liveTimer"></p>
+      </div>
+    </div>
+
+      <!-- Adding the table for the train schedule -->
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            Train Schedule
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency (min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody id="trainSchedule">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adding the form for entering a new train -->
+
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            Train Schedule
+          </div>
+          <div class="card-body">
+
+            <form>
+
+              <!-- Add an input field for the name of the train -->
+
+              <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName" placeholder="Enter name of train">
+              </div>
+
+              <!-- Add an input field for the destination -->
+
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination" placeholder="Destination">
+              </div>
+
+              <!-- Add an input field for first Arrival at the station -->
+
+              <div class="form-group">
+                <label for="firstTrainTime">First train time (HH:mm - military time)</label>
+                <input type="text" class="form-control" id="firstTrainTime" placeholder="What times foes the first train arrive at this station">
+              </div>
+
+              <!-- Add an input field for how often the train arrives at the station -->
+
+              <div class="form-group">
+                <label for="frequency">Frequency</label>
+                <input type="text" class="form-control" id="frequency" placeholder="Train Frequency (in minutes)">
+              </div>
+
+                <!-- Add a button for adding a new train -->
+
+              <button type="submit" id='addTrain' class="btn btn-primary">Add</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+<script type="text/javascript" src="./assets/javascript.js">
+
+</script>
+  </body>
+</html>
